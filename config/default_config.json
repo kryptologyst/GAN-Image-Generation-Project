@@ -1,0 +1,36 @@
+{
+  "model": {
+    "type": "simple",
+    "latent_dim": 100,
+    "image_size": 28,
+    "num_channels": 1,
+    "feature_map_size": 64
+  },
+  "training": {
+    "num_epochs": 30,
+    "batch_size": 128,
+    "lr_g": 0.0002,
+    "lr_d": 0.0002,
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "k_steps": 1,
+    "save_interval": 5
+  },
+  "data": {
+    "dataset": "mnist",
+    "data_dir": "./data",
+    "download": true,
+    "synthetic_samples": 1000,
+    "pattern_type": "circles"
+  },
+  "device": "auto",
+  "logging": {
+    "level": "INFO",
+    "log_file": "./logs/training.log"
+  },
+  "output": {
+    "save_dir": "./outputs",
+    "checkpoint_dir": "./checkpoints",
+    "sample_dir": "./samples"
+  }
+}
